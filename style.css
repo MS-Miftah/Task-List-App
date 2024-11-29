@@ -1,0 +1,73 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/cloud.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+.container {
+  height: 400px;
+  width: 350px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  margin: 0;
+  border-radius: 10px;
+}
+h1 {
+  margin: 0;
+  color: #fff;
+  font-weight: 900;
+  text-shadow: 1px 1px 2px rgb(8, 0, 0), 1px 1px 2px black, 1px 1px 2px black;
+  padding: 0;
+}
+h3 {
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+}
+#input {
+  margin: 0;
+  padding: 0;
+  width: 76%;
+  height: 35px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  font-weight: med;
+}
+button {
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  height: 35px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  background-color: skyblue;
+  font-weight: 600;
+  font-size: small;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(89, 180, 200);
+}
+ul {
+  padding-left: 20px;
+}
+.task {
+  display: flex;
+  padding: 10px 0;
+}
+.text {
+  width: 95%;
+}
