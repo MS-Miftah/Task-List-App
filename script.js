@@ -2,14 +2,13 @@ document.querySelector("#btn").addEventListener("click", () => {
   const input = document.querySelector("#input");
   const task = `<div class="task">
      <li class="text">${input.value}</li>
-     <input type="checkbox" id="check" />
+     <input type="checkbox" class="check" />
    </div>`;
 
   if (input.value === "") {
     alert("Please add a task!");
   } else {
     document.querySelector("#list").insertAdjacentHTML("afterbegin", task);
-    done();
     resetInput(input);
   }
 });
@@ -37,9 +36,9 @@ function date() {
   return formatedDate;
 }
 
-function done() {
-  document.querySelector("#check").addEventListener("click", () => {
-    document.querySelector(".text").style.cssText =
-      "text-decoration: line-through; color: rgba(0, 0, 0, 0.5);";
-  });
-}
+document.querySelector("#list").addEventListener("click", (e) => {
+  if (e.target.classList.contains("check")) {
+    const textElement = e.target.previousElementSibling;
+    textElement.classList.toggle("completed");
+  }
+});
